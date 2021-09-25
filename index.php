@@ -1,9 +1,11 @@
 <?php
-    for ($i = 1; $i <= 15; ++$i) {
-        $numbers[] = $i;
+    function print_numbers($min,$max){
+        for ($i = $min; $i <= $max; ++$i) {
+            $numbers[] = $i;
+        }
+        foreach ($numbers as $number) {
+            echo '<li>' . $number . '</li>';
+        }
     }
-    
-    foreach ($numbers as $number) {
-        echo '<li>' . $number . '</li>';
-    }
+    print_numbers(0,15);
 ?>
